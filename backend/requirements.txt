@@ -3,3 +3,5 @@ flask-cors
 pandas
 prophet
 requests
+waitress
+cmdstanpy
