@@ -3,7 +3,7 @@ services:
     name: gold-price-api
     runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: python app.py
+    startCommand: python -m waitress --listen=0.0.0.0:$PORT app:app
     envVars:
       - key: PORT
         value: 5000
