@@ -1,0 +1,219 @@
+/* GoldPredictor.css */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+
+body {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  background: url('https://watcher.guru/news/wp-content/uploads/2024/07/Gold-389-leap.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+.gold-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.gold-card {
+  background: linear-gradient(to bottom right, #3a3a3a, #1f1f1f);
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+  border: 1px solid #FFD700;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.gold-title {
+  color: #FFD700;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.gold-input {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #FFD700;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  color: #333;
+}
+
+.gold-button {
+  background: linear-gradient(90deg, #FFD700, #FFB700);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #000;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.gold-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #FFDA44, #FFC107);
+}
+
+.gold-result {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.gold-result span {
+  color: #FFD700;
+  font-weight: bold;
+}
+
+.gold-error {
+  margin-top: 20px;
+  color: #FF4C4C;
+  font-weight: bold;
+}
+
+.gold-chart {
+  margin-top: 30px;
+}
+@media (max-width: 500px) {
+  .gold-card {
+    padding: 20px 15px;
+  }
+
+  .gold-title {
+    font-size: 20px;
+  }
+
+  .gold-button {
+    width: 100%;
+  }
+}
+.gold-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0); /* translucent black */
+  text-align: center;
+  z-index: 10;
+}
+
+.gold-header h1 {
+  margin: 0;
+  font-size: 44px;
+  color: #FFD700;
+  font-weight: bold;
+  
+}
+.gold-navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  color: #FFD700;
+  display: flex;
+  
+    justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(255, 215, 0, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+.nav-brand {
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px #00000000;
+  margin-left: 30px;
+}
+
+.nav-links a {
+  color: #FFD700;
+  text-decoration: none;
+  margin-left: 30px;
+  margin-right: 30px;
+    font-size: 20px;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .gold-navbar {
+    flex-direction: column;
+    
+  }
+
+  .nav-links {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-links a {
+    margin: 5px 0;
+  }
+}
+
+.gold-container {
+  padding-top: 120px; /* Push content below navbar */
+}
+
+
+.gold-container {
+  padding: 100px 20px 40px;
+  max-width: 100%;
+  margin: auto;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 16px;
+  color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0);
+}
+
+.gold-container h2,h3{
+  color: #FFD700;
+  margin-bottom: 15px;
+}
+
+.gold-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.gold-container li {
+  padding: 10px;
+  border-bottom: 1px solid #FFD700;
+}
+
+
+.gold-container button {
+  margin-top: 10px;
+  background: #FFD700;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.about_css {
+  background: linear-gradient(to bottom right, #3a3a3a, #1f1f1f);
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+  border: 1px solid #FFD700;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
