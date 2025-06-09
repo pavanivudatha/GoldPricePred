@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Line } from "react-chartjs-2";
 import { Link } from "react-router-dom";
+import GoldSpinner from "../components/GoldSpinner";
 import {
   Chart as ChartJS,
   LineElement,
@@ -20,9 +21,11 @@ const GoldPredictor = () => {
   const [prediction, setPrediction] = useState(null);
   const [error, setError] = useState("");
   const [history, setHistory] = useState([]);
+  const [loading, setLoading] = useState(false);
 
 
   const predictPrice = async () => {
+    setLoading(true);
     try {
       const res = await axios.get(`https://goldpricepred.onrender.com/predict?date=${date}`);
       setPrediction(res.data.predicted_price);
@@ -39,6 +42,9 @@ const GoldPredictor = () => {
       setPrediction(null);
       setError("Failed to get prediction. Try another date.");
     }
+    finally {
+    setLoading(false);
+  }
   };
 
   const chartData = {
@@ -76,18 +82,19 @@ const GoldPredictor = () => {
           onChange={(e) => setDate(e.target.value)}
         />
         
-        <button className="gold-button" onClick={predictPrice}>
-          Predict
+        <button className="gold-button" onClick={predictPrice} disabled={loading}>
+          {loading ? "Predicting..." : "Predict"}
         </button>
         <button className="gold-button" onClick={() => {setDate(""); setPrediction(null); setError(""); setHistory([]);}}>
           Clear
         </button>
-        {prediction && (
+         {loading && <GoldSpinner />}
+        {prediction && !loading &&(
           <div className="gold-result animate__animated animate__fadeIn">
             <h3>Predicted Price: <span>₹{prediction}</span></h3>
           </div>
         )}
-        {error && <p className="gold-error">{error}</p>}
+        {error && !loading && <p className="gold-error">{error}</p>}
 
         {history.length > 1 && (
           <div className="gold-chart">
